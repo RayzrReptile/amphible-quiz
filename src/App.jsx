@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import './assets'
+import logo from './assets/AmphibleLogo.png'
 
 function App() {
   // useState Variable
@@ -94,7 +94,7 @@ function App() {
       <div className="header">
         <div className="title">
           <h1>The</h1>
-          <img src="./assets/AmphibleLogo.png" alt="Amphible Logo" draggable="false"/>
+          <img src={logo} alt="Amphible Logo" draggable="false"/>
           <h1>Quiz!</h1>
         </div>
         <h2 className="subtitle">Think you know the wacky world of Amphible?<br></br>Try this quirky quiz here!</h2>
