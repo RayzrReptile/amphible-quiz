@@ -1,0 +1,93 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+div {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.App {
+  background-color: rgba(31, 30, 30, 0.811);
+  padding: 32px;
+  border-radius: 12px;
+}
+
+.header {
+  line-height: 1.15;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title img {
+  width: 400px;
+  margin: 0px 12px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  padding: 12px;
+  margin: 0px 32px;
+  color: black;
+  background-color: rgb(241, 241, 225);
+  box-shadow: 0 0 5px 2px #ffffff4d;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: .15s;
+  transform: perspective(1000px) rotateX(var(--rotate-X, 0));
+  transform-style: preserve-3d;
+}
+.card.flipped {
+  --rotate-X: 180deg
+}
+
+.card .front, .card .back {
+  position: absolute;
+  margin: 32px;
+  line-height: 1.25;
+  justify-content: center;
+  backface-visibility: hidden;
+}
+.card .back {
+  transform: rotateX(180deg);
+}
+
+button {
+  margin: 12px;
+  width: 80px
+}
+.random-button {
+  width: 200px
+}
+
+.card#easy {
+  background-color: aquamarine;
+}
+button#easy:hover {
+  border: 1px solid aquamarine;
+}
+.card#medium {
+  background-color: rgb(239, 244, 139);
+}
+button#medium:hover {
+  border: 1px solid rgb(239, 244, 139);
+}
+.card#hard {
+  background-color: rgb(241, 169, 157);
+}
+button#hard:hover {
+  border: 1px solid rgb(241, 169, 157);
+}
