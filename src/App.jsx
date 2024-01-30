@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import './assets'
 
 function App() {
   // useState Variable
