@@ -93,7 +93,7 @@ function App() {
       <div className="header">
         <div className="title">
           <h1>The</h1>
-          <img src="./public/AmphibleLogo.png" alt="Amphible Logo" draggable="false"/>
+          <img src="./assets/AmphibleLogo.png" alt="Amphible Logo" draggable="false"/>
           <h1>Quiz!</h1>
         </div>
         <h2 className="subtitle">Think you know the wacky world of Amphible?<br></br>Try this quirky quiz here!</h2>
