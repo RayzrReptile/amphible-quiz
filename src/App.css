@@ -11,7 +11,7 @@ div {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .App {
@@ -28,6 +28,7 @@ div {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Noteworthy', sans-serif;
 }
 .title img {
   width: 400px;
@@ -38,7 +39,7 @@ div {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 250px;
+  height: 320px;
   padding: 12px;
   margin: 0px 32px;
   color: black;
@@ -65,12 +66,141 @@ div {
   transform: rotateX(180deg);
 }
 
+.front {
+  position: relative;
+}
+.img-indicator {
+  position: fixed;
+  margin: 12px;
+  left: 0;
+  top: 0;
+}
+
 button {
   margin: 12px;
   width: 80px
 }
 .random-button {
   width: 200px
+}
+
+.score-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  margin-bottom: 24px;
+}
+.score-container > * {
+  padding: 0px 12px;
+}
+
+.start-container {
+  max-width: 450px;
+  margin: 0 auto;
+  margin-top: 24px;
+}
+
+.tutorial {
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 20px;
+  color: rgb(158, 160, 160);
+}
+
+.start-button {
+  font-size: 4rem;
+  width: inherit;
+  height: 250px;
+  transition: 0.25s;
+}
+.start-button:hover {
+  border: 1px solid #71e3e2;
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.25s;
+  filter: drop-shadow(0 0 5px #71e3e2);
+}
+.start-button:active {
+  color: #0ae8d9;
+  transform: scale(0.97);
+  transition: 0.25s;
+  filter: drop-shadow(0 0 15px #0ae8d9);
+}
+
+.guess-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  margin: 12px 0;
+}
+.guess-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.check-button {
+  width: 250px;
+  margin: 0;
+}
+.reset-button {
+  width: 160px;
+  margin: 0 12px 0 0;
+}
+.text-input {
+  text-align: center;
+  color: rgb(241, 245, 245);
+  font-size: 1rem;
+  border: none;
+  background-color: #1a1a1a;
+  height: 36px;
+  width: 100%;
+  border-radius: 8px;
+  margin-right: 12px;
+}
+.text-input:focus-visible {
+  outline: none;
+}
+
+.batch-selector {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 6px;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 12px;
+}
+.batch-title {
+  margin: 0 18px;
+}
+
+.batch-up, .batch-down {
+  margin: 0 6px 0 0;
+  width: 50px;
+}
+.batch-up:hover, .batch-down:hover {
+  border: 1px solid #71e3e2;
+}
+
+.button-container {
+  transition: 0.25s;
+  background-color: #1a1a1a;
+  margin: 0 32px;
+  border-radius: 12px;
+}
+
+#Correct, #Wrong {
+  pointer-events: none;
+  user-select: none;
+  opacity: 50%;
 }
 
 .card#easy {
@@ -90,4 +220,83 @@ button#medium:hover {
 }
 button#hard:hover {
   border: 1px solid rgb(241, 169, 157);
+}
+
+@keyframes reshuffle {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.7) rotate(5deg);
+    box-shadow: 0 0 50px 2px #ffffff;
+  }
+  20% {
+    transform: rotate(-5deg);
+    box-shadow: 0 0 20px 2px #ffffff;
+  }
+  40% {
+    transform: rotate(1deg);
+  }
+  70% {
+    transform: rotate(-1deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+.reshuffle {
+  animation-name: reshuffle;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}  
+
+@keyframes wrong {
+  0% {
+    transform: translateX(-2px);
+    box-shadow: 0 0 10px 2px #d30202;
+  }
+  10% {
+    transform: translateX(-10px);
+  }
+  30% {
+    transform: translateX(10px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+  90% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.wrong-guess {
+  animation-name: wrong;
+  animation-duration: 250ms;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes correct {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px 2px #0dea1c;
+  }
+  10% {
+    transform: scale(1.025);
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.correct-guess {
+  animation-name: correct;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
 }
