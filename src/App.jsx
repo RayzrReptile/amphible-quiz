@@ -90,7 +90,7 @@ function App() {
     difficulty: "medium", 
     guessed: "Unguessed"},
     {question: "Chez's original intended species was a ____ before it was changed to an axolotl.", 
-    answer: 'Kamodo Dragon',
+    answer: 'Komodo Dragon',
     difficulty: "hard", 
     guessed: "Unguessed"},
     {question: "What are Arv and Tidbit's relation to one another?", 
