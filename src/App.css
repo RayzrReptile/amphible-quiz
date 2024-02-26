@@ -308,9 +308,6 @@ button#hard:hover {
     width: 100vw;
     height: 100vh;
   }
-  :root {
-    height: 100vw;
-  }
   /* :root {
     background-image: none !important;
   } */
@@ -321,7 +318,7 @@ button#hard:hover {
 
   .App {
     width: 100vw;
-    margin: 0px;
+    margin: 36px 0px;
     padding: 24px 0px;
     border-radius: 0px;
   }
