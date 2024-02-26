@@ -304,21 +304,13 @@ button#hard:hover {
 }
 
 @media screen and (max-width: 480px) {
-  #root {
-    width: 100vw;
-    height: 100vh;
-  }
-  /* :root {
-    background-image: none !important;
-  } */
-  
+
   button, input {
     font-size: 3.5vw !important;
   }
 
   .App {
     width: 100vw;
-    margin: 36px 0px;
     padding: 24px 0px;
     border-radius: 0px;
   }
