@@ -76,6 +76,9 @@ div {
   margin: 12px;
   left: 0;
   top: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
 }
 
 button {
@@ -307,9 +310,9 @@ button#hard:hover {
   #root {
     width: 100vw;
   }
-  :root {
-    background-size: cover !important;
-  }
+  /* :root {
+    background-image: none !important;
+  } */
   
   button, input {
     font-size: 3.5vw !important;
@@ -317,7 +320,6 @@ button#hard:hover {
 
   .App {
     width: 100vw;
-    height: 80vh;
     margin: 0px;
     padding: 24px 0px;
     border-radius: 0px;
