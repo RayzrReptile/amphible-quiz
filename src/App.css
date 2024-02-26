@@ -308,6 +308,9 @@ button#hard:hover {
     width: 100vw;
     height: 100vh;
   }
+  :root {
+    height: 100vw;
+  }
   /* :root {
     background-image: none !important;
   } */
