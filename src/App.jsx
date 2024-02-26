@@ -324,13 +324,16 @@ function App() {
       checkNotFlipped();
     }, 300);
   }
+  const reloadPage = () => {
+    location.reload();
+  }
 
   return (
     <div className="App">
       <div className="header">
         <div className="title">
           <h1>The</h1>
-          <img src="./AmphibleLogo.png" alt="Amphible Logo" draggable="false"/>
+          <img src="./AmphibleLogo.png" onClick={reloadPage} alt="Amphible Logo" draggable="false"/>
           <h1>Quiz!</h1>
         </div>
         <div className="introduction-container">

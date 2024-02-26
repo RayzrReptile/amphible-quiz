@@ -33,6 +33,7 @@ div {
 .title img {
   width: 400px;
   margin: 0px 12px;
+  cursor: pointer;
 }
 
 .card {
@@ -61,6 +62,7 @@ div {
   line-height: 1.25;
   justify-content: center;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 .card .back {
   transform: rotateX(180deg);
@@ -305,6 +307,9 @@ button#hard:hover {
   #root {
     width: 100vw;
   }
+  :root {
+    background-size: cover !important;
+  }
   
   button, input {
     font-size: 3.5vw !important;
@@ -312,7 +317,7 @@ button#hard:hover {
 
   .App {
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     margin: 0px;
     padding: 24px 0px;
     border-radius: 0px;
@@ -347,11 +352,24 @@ button#hard:hover {
   }
 
   .card {
-    height: 230px;
+    height: 130px;
     font-size: 3.5vw;
   }
   .img-indicator {
-    width: 60px;
+    width: 40px;
+  }
+
+  .introduction-container {
+    font-size: 80% !important;
+  }
+
+  .start-container {
+    margin: 0;
+  }
+  .start-button {
+    width: 80%;
+    height: 100px;
+    font-size: 36px !important;
   }
 
   .guess-container {
@@ -377,5 +395,14 @@ button#hard:hover {
   .button-container > *{
     margin: 0;
     padding: 24px 0;
+  }
+
+  .check-button {
+    height: 38px;
+  }
+
+  .batch-selector {
+    width: 78vw;
+    font-size: 3.5vw;
   }
 }
